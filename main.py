@@ -1,4 +1,4 @@
-# Створення текстового файлу з обробкою виключень - Бобошко Вадим
+# Створення текстового файлу та вивід вмісту файлу - Бобошко Вадим
 def create_file():
     try:
         file = open("students_questions.txt", "w", encoding="utf-8")
@@ -8,8 +8,17 @@ def create_file():
         print("Помилка: не знайдено шлях до файлу.")
     except PermissionError:
         print("Помилка: немає дозволу на запис у файл.")
-
 create_file()
+
+def read_file():
+    try:
+        file = open("students_questions.txt", "r", encoding="utf-8")
+        print("Вміст файлу:")
+        print("--------------------------")
+        print(file.read())
+        file.close()
+    except FileNotFoundError:
+        print("Помилка: файл не знайдено.")
 
 # Перше питання - Бобошко Вадим
 def first_question():
@@ -22,5 +31,11 @@ def first_question():
         print("Помилка: файл не знайдено.")
     except PermissionError:
         print("Помилка: немає дозволу на запис у файл.")
-
 first_question()
+
+
+
+
+
+
+read_file()
