@@ -72,5 +72,46 @@ def second_question():
 
 second_question()
 
+# Відповідь на друге питання — Чесной Владислав
+def second_answer():
+    try:
+        with open("students_questions.txt", "a", encoding="utf-8") as file:
+            file.write("Відповідь Чесного Владислава\n")
+            file.write(
+                "Множина (set) — це невпорядкована колекція унікальних елементів у Python. "
+                "Множини не можуть містити дублікати і не підтримують індексацію.\n"
+                "Операції з множинами:\n"
+                "- Об'єднання (union): set1 | set2 або set1.union(set2)\n"
+                "- Перетин (intersection): set1 & set2 або set1.intersection(set2)\n"
+                "- Різниця (difference): set1 - set2 або set1.difference(set2)\n"
+                "Приклад: {1, 2, 3} | {3, 4, 5} = {1, 2, 3, 4, 5}\n"
+            )
+        print("Відповідь Чесного Владислава успішно додана до файлу.")
+    except FileNotFoundError:
+        print("Помилка: файл не знайдено.")
+    except PermissionError:
+        print("Помилка: немає дозволу на запис у файл.")
+    except Exception as e:
+        print(f"Несподівана помилка: {e}")
+
+second_answer()
+
+
+# Третє питання — Чесной Владислав
+def third_question():
+    try:
+        with open("students_questions.txt", "a", encoding="utf-8") as file:
+            file.write("\nПитання Чесного Владислава\n")
+            file.write("3. Що таке словник (dictionary) у Python і як додати, змінити або видалити елемент зі словника?\n")
+        print("Питання Чесного Владислава успішно додане до файлу.")
+    except FileNotFoundError:
+        print("Помилка: файл не знайдено.")
+    except PermissionError:
+        print("Помилка: немає дозволу на запис у файл.")
+    except Exception as e:
+        print(f"Несподівана помилка: {e}")
+
+third_question()
+
 
 read_file()
