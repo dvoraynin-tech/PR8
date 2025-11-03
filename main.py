@@ -113,5 +113,50 @@ def third_question():
 
 third_question()
 
+# Відповідь на третє питання — Пилипчук Єлизавета
+def third_answer():
+    try:
+        with open("students_questions.txt", "a", encoding="utf-8") as file:
+            file.write("Відповідь Пилипчук Єлизавети \n")
+            file.write(
+                "Словник у Python — це структура даних, яка зберігає інформацію у\n"
+                "форматі «ключ — значення». Ключі мають бути унікальними та незмінними,\n"
+                "наприклад, рядки або числа, а значення можуть бути будь-якого типу.\n"
+                "Щоб створити словник, використовуємо фігурні дужки. Наприклад:\n"
+                "person = {name: Олена, age(: 30}\n"
+                "Щоб додати новий елемент, просто присвоюємо значення новому ключу:\n"
+                "person[city] = Київ\n"
+                "Щоб змінити значення — звертаємось до ключа і присвоюємо нове:\n"
+                "person[age] = 31\n"
+                "Щоб видалити елемент, можна використати del:\n"
+                "del person[name]\n"
+                "або метод pop(), який ще й повертає значення:\n"
+                "person.pop(city)\n"
+            )
+        print("Відповідь Пилипчук Єлизавети успішно додана до файлу.")
+    except FileNotFoundError:
+        print("Помилка: файл не знайдено.")
+    except PermissionError:
+        print("Помилка: немає дозволу на запис у файл.")
+    except Exception as e:
+        print(f"Несподівана помилка: {e}")
+
+third_answer()
+
+# Четверте питання — Пилипчук Єлизавета
+def fourth_question():
+    try:
+        with open("students_questions.txt", "a", encoding="utf-8") as file:
+            file.write("\nПитання Пилипчук Єлизавети\n")
+            file.write("4. Як у Python відкрити текстовий файл і прочитати його вміст?\n")
+        print("Питання Пилипчук Єлизавети успішно додане до файлу.")
+    except FileNotFoundError:
+        print("Помилка: файл не знайдено.")
+    except PermissionError:
+        print("Помилка: немає дозволу на запис у файл.")
+    except Exception as e:
+        print(f"Несподівана помилка: {e}")
+
+fourth_question()
 
 read_file()
