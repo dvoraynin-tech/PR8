@@ -158,5 +158,46 @@ def fourth_question():
         print(f"Несподівана помилка: {e}")
 
 fourth_question()
+# Відповідь на четверте питання — Єрмоленко Владислав
+def fourth_answer():
+    try:
+        with open("students_questions.txt", "a", encoding="utf-8") as file:
+            file.write("Відповідь Єрмоленка Владислава\n")
+            file.write(
+                "У Python можна легко відкрити текстовий файл і прочитати "
+                "його вміст за допомогою вбудованої функції open().\n"
+                "Найкращий спосіб зробити це — використати менеджер контексту with, "
+                "оскільки він автоматично дбає про правильне закриття файлу, \n"
+                "навіть якщо виникнуть помилки.\n"
+                "Основний синтаксис: \n"
+                "with open('im_ya_faylu.txt', 'r', encoding='utf-8') as file:\n"
+                "vmist = file.read()\n"
+                "print(vmist)\n"
+                )
+        print("Відповідь Єрмоленка Владислава успішно додана до файлу.")
+    except FileNotFoundError:
+        print("Помилка: файл не знайдено.")
+    except PermissionError:
+        print("Помилка: немає дозволу на запис у файл.")
+    except Exception as e:
+        print(f"Несподівана помилка: {e}")
 
+fourth_answer()
+
+
+# П'яте питання — Єрмоленко Владислав
+def fifth_question():
+    try:
+        with open("students_questions.txt", "a", encoding="utf-8") as file:
+            file.write("\nПитання Єрмоленка Владислава\n")
+            file.write("5. Як у Python найефективніше підрахувати кількість входжень кожного слова у довгому рядку (string) і зберегти результат у словнику (dictionary)?\n")
+        print("Питання Єрмоленка Владислава успішно додане до файлу.")
+    except FileNotFoundError:
+        print("Помилка: файл не знайдено.")
+    except PermissionError:
+        print("Помилка: немає дозволу на запис у файл.")
+    except Exception as e:
+        print(f"Несподівана помилка: {e}")
+
+fifth_question()
 read_file()
